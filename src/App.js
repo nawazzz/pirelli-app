@@ -11,6 +11,7 @@ import TireDetailsDrawer from './components/TireDetailsDrawer';
 import DiscoverCardComponent from './components/DiscoverCardComponent';
 import ProductSectionComponent from './components/ProductSectionComponent';
 import ServiceSectionComponent from './components/ServiceSectionComponent';
+import DiscoverAdvicesComponent from './components/DiscoverAdvicesComponent';
 
 class App extends React.Component {
   constructor(props) {
@@ -94,6 +95,9 @@ class App extends React.Component {
           </VStack>
           <VStack w='100%' mt='20'>
             <ServiceSectionComponent/>
+          </VStack>
+          <VStack w='100%' mt='20' py='20' bg='#F3F5F6'>
+            <DiscoverAdvicesComponent/>
           </VStack>
 
         { this.state.openBookingModal === true && 
