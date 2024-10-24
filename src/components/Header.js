@@ -14,9 +14,9 @@ import swissFlag from '../logos/swiss.jpg';
 class Header extends React.Component {
   render() {
     return (
-      <VStack w='100%' bg='#F3F5F6' mx='auto' >
-        <VStack pt='4' pb='4' w='100%' mx='auto' px='130px' >
-          <Flex w='100%' px='130px'  justifyContent='space-between' alignItems='center'>
+      <Flex w='100%' bg='#F3F5F6' mx='auto' >
+        <Flex pt='4' pb='4' w='100%' mx='auto' maxW='1440px'>
+          <Flex w='100%' px={{ base: 'none', md: '130px' }}  justifyContent='space-between' alignItems='center'>
             <Flex gap='4'>
               <Box cursor='pointer'>
                 {/* <Text as='span'>IT</Text> */}
@@ -27,14 +27,14 @@ class Header extends React.Component {
               </Box>
             </Flex>
             <Flex flexDirection='row' gap='5'> 
-              <Button display={{ base: 'none', md: 'block' }} bg='#FFDD00' fontWeight='700' _hover={{_after: {bg: '#FFDD00'}}} onClick={() => {this.props.handleBookingPopup()}} >Prenota un appuntamento</Button>
+              <Button display={{ base: 'none', md: 'block', lg: 'block', xl: 'block' }} bg='#FFDD00' fontWeight='700' _hover={{_after: {bg: '#FFDD00'}}} onClick={() => {this.props.handleBookingPopup()}} >Prenota un appuntamento</Button>
               <Box cursor='pointer' alignContent='center'>
                 <Image maxH='5' src={cartIcon}/>
               </Box>
             </Flex>
           </Flex>
-        </VStack>
-      </VStack>
+        </Flex>
+      </Flex>
     );
   }
 }

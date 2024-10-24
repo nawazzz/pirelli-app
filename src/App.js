@@ -14,6 +14,8 @@ import ServiceSectionComponent from './components/ServiceSectionComponent';
 import DiscoverAdvicesComponent from './components/DiscoverAdvicesComponent';
 import DiscoverFAQComponent from './components/DiscoverFAQComponent';
 import DriverCenterNetwork from './components/DriverCenterNetwork';
+import WorkshopComponent from './components/WorkshopComponent';
+import FooterComponent from './components/FooterComponent';
 
 class App extends React.Component {
   constructor(props) {
@@ -75,7 +77,7 @@ class App extends React.Component {
   render() {
     return(
       <ChakraProvider>
-        <VStack minH='100vh' display='flex' flexDir='column'>
+        <VStack minH='100vh' w='100%' minWidth={{ base: '100vh', md: 'none'}} display='flex' flexDir='column'>
             <VStack w='100%' position='fixed' bg='#F3F5F6'>
               <Header handleBookingPopup={this.handleBookingPopup}/>
             {/* <VStack>
@@ -106,6 +108,12 @@ class App extends React.Component {
           </VStack>
           <VStack w='100%' mt='20'>
             <DriverCenterNetwork/>
+          </VStack>
+          <VStack w='100%' mt='20'>
+            <WorkshopComponent/>
+          </VStack>
+          <VStack w='100%'>
+            <FooterComponent/>
           </VStack>
 
         { this.state.openBookingModal === true && 
