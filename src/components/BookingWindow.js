@@ -6,7 +6,7 @@ class BookingWindow extends React.Component {
     render() {
         return(
             <Flex justifyContent='end' bg='rgba(30, 35, 41, 0.4)' w='100%' height={{base: '100%', md: '100vh'}} zIndex={-1} position='fixed' left='50%' top='50%' bottom='50%' transform='translate(-50%, -50%)'>
-                <Flex bg='white' flexDir='column' alignItems='flex-start' gap='5' height={{base: '92%', md: '100%'}} maxWidth={{base:'100%', md: '32rem'}} top={{bas: '100px', md:'none'}} position={{base:'absolute', md: 'relative'}}>
+                <Flex bg='white' flexDir='column' alignItems='flex-start' gap='5' height={{base: '92%', md: '100%'}} maxWidth={{base:'100%', md: '32rem'}} top={{bas: '100px', md:'none'}} position={{base:'absolute', md: 'relative'}} bottom={{base: '0', md: 'none'}}>
                     <Flex w='100%' justifyContent='space-between' p='20px' borderBottom='1px' borderBottomColor='#DEE0E1' >
                         <Flex w='fit-content' alignItems='center' color='#B3B6B9' gap='2' cursor='pointer'>
                             <ArrowBackIcon />
@@ -26,7 +26,7 @@ class BookingWindow extends React.Component {
                         <Box>
                             <Text fontSize='16px' color='black' fontWeight='400'>We offer fast and convenient seasonal tire replacement to ensure you always drive safely and comfortably, whatever the weather</Text>  
                         </Box> 
-                        <Flex gap='3' py='20px'  >
+                        <Flex gap='3' py='20px' flexDir={{base: 'column', md: 'row'}}  >
                             <Select placeContent='DE' fontWeight='700' borderColor='#DEE0E1'  value={this.props.inputValue} onChange={(event) => {this.props.handleInputValue(event)}}>
                                 <option value='option1'>DE</option>
                                 <option value='option2'>IT</option>
