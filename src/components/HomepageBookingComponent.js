@@ -221,7 +221,7 @@ class HomepageBookingComponent extends React.Component {
                                 </Box> 
                             </Flex>                           
                         </Flex>
-                        <Flex w={{base: '', md:'282px'}}>
+                        <Flex w={{base: '', md:'282px'}} justifyContent='center'>
                             <Flex flexDir='column' alignItems='center' gap='6'>
                                 <Icon viewBox="0 0 45 45" w='70px' h='70px' >
                                     <g clipPath="url(#clip0_11536_269)">
