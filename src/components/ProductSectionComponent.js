@@ -8,14 +8,14 @@ import scorpion from '../logos/tire-image-scorpion.png'
 class ProductSectionComponent extends React.Component {
     render() {
         return(
-            <VStack w='100%' px='120px' mx='auto' maxW='1440px'>
+            <VStack w='100%' px={{base: '60px', md: '120px'}} mx='auto' maxW='1440px'>
                 <Flex w='100%' flexDir='column'>
-                    <Flex fontSize='60px' fontWeight='600' gap='3' w='100%' justifyContent='center' lineHeight='3.75rem'>
+                    <Flex fontSize='60px' fontWeight='600' gap='3' w='100%' justifyContent='center' lineHeight={{base: '1', md: '3.75rem'}} flexDir={{base: 'column', md: 'row'}}>
                         Scopri i nostri
                         <Text as='span' color='#B3B6B9'>prodotti</Text>
                     </Flex>
-                    <Flex w='100%' gap='6' justifyContent='center' py='10' zIndex='-1'>
-                        <Flex w='384px' p='5' gap='4'  border='1px solid' borderColor='#C8CBCD' borderRadius='lg' flexDir='column' overflow='hidden'>
+                    <Flex w='100%' gap='6' justifyContent='center' py='10' zIndex='-1' flexDir={{base: 'column', md: 'row'}}>
+                        <Flex w={{base: '', md:'384px'}} p='5' gap='4'  border='1px solid' borderColor='#C8CBCD' borderRadius='lg' flexDir='column' overflow='hidden'>
                             <Flex gap='2' w='100%'>
                                 <Flex alignItems='center' gap='2' bg='#F3F5F6' py='1' px='2' borderRadius='lg' >
                                     <Icon viewBox="0 0 24 24" h='6' w='6'>
@@ -62,7 +62,7 @@ class ProductSectionComponent extends React.Component {
                                 />
                             </Flex>
                         </Flex>
-                        <Flex w='384px' p='5' gap='4' border='1px solid' borderColor='#C8CBCD' borderRadius='lg' flexDir='column' overflow='hidden' justifyContent='flex-start'>
+                        <Flex w={{base: '', md:'384px'}} p='5' gap='4' border='1px solid' borderColor='#C8CBCD' borderRadius='lg' flexDir='column' overflow='hidden' justifyContent='flex-start'>
                             <Flex gap='2' w='100%'>
                                 <Flex alignItems='center' gap='2' bg='#F3F5F6' py='1' px='2' borderRadius='lg'>
                                     <Icon viewBox="0 0 24 24">
@@ -110,7 +110,7 @@ class ProductSectionComponent extends React.Component {
                                 />
                             </Flex>
                         </Flex>
-                        <Flex w='384px' p='5' gap='4' border='1px solid' borderColor='#C8CBCD' borderRadius='lg' flexDir='column' overflow='hidden' justifyContent='flex-start'>
+                        <Flex w={{base: '', md:'384px'}} p='5' gap='4' border='1px solid' borderColor='#C8CBCD' borderRadius='lg' flexDir='column' overflow='hidden' justifyContent='flex-start'>
                             <Flex gap='2' w='100%'>
                                 <Flex alignItems='center' gap='2' bg='#F3F5F6' py='1' px='2' borderRadius='lg'>
                                     <Icon viewBox="0 0 24 24">

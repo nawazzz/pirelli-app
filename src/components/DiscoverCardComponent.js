@@ -11,9 +11,9 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 class DiscoverCardComponent extends React.Component {
     render() {
         return(
-            <VStack w='100%' px='120px' mx='auto' maxW='1440px'>
+            <VStack w='100%' px={{base: '60px', md: '120px'}} mx='auto' maxW='1440px'>
                 <Flex justifyContent='space-between' w='100%' alignItems='center'>
-                    <Flex fontSize='60px' fontWeight='600' justifyContent='flex-start' gap='3' w='100%'>
+                    <Flex fontSize='60px' fontWeight='600' justifyContent='flex-start' gap='3' w='100%' lineHeight='1' flexDir={{base: 'column', md: 'row'}}>
                         Scopri le nostre
                         <Text as='span' color='#B3B6B9'>promozioni</Text>
                     </Flex>
@@ -27,7 +27,7 @@ class DiscoverCardComponent extends React.Component {
                             justifyContent='center'
                             cursor='pointer'
                         >
-                            <ChevronLeftIcon w='24px' h='none'/>
+                            <ChevronLeftIcon display={{base: 'none', md: 'block'}} w='24px' h='none'/>
                         </Flex>
                         <Flex
                             borderRadius='lg'
@@ -38,13 +38,13 @@ class DiscoverCardComponent extends React.Component {
                             justifyContent='center'
                             cursor='pointer'
                         >
-                            <ChevronRightIcon w='24px' h='none'/>
+                            <ChevronRightIcon display={{base: 'none', md: 'block'}} w='24px' h='none'/>
                         </Flex>
                     </Flex>
                 </Flex>
-                <Flex gap='6' w='100%' pt='40px' overflow='visible'>
+                <Flex gap='6' w='100%' pt='40px' overflow='visible' flexDir={{base: 'column', md: 'row'}}>
                     <Flex
-                        w='646px'
+                        w={{base: '', md: '646px'}}
                         backgroundImage={discoverImageOne}
                         backgroundSize='100% 100%'
                         backgroundPosition='0% 0%'
@@ -84,7 +84,7 @@ class DiscoverCardComponent extends React.Component {
                         </Flex>
                     </Flex>
                     <Flex
-                        w='646px'
+                        w={{base: '', md: '646px'}}
                         backgroundImage={discoverImageTwo}
                         backgroundSize='100% 100%'
                         backgroundPosition='0% 0%'
