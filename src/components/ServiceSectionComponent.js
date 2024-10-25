@@ -5,14 +5,14 @@ import { ArrowForwardIcon, Icon } from '@chakra-ui/icons'
 class ServiceSectionComponent extends React.Component {
     render() {
         return(
-            <VStack w='100%' px='120px' mx='auto' maxW='1440px'>
+            <VStack w='100%' px={{base: '60px', md: '120px'}} mx='auto' maxW='1440px'>
                 <Flex w='100%' flexDir='column' justifyContent='flex-start' >
                     <Flex fontSize='60px' fontWeight='600' gap='3' w='100%'  lineHeight='3.75rem'>
                         Scopri i
                         <Text as='span' color='#B3B6B9'>servizi</Text>
                     </Flex>
-                    <Flex w='100%' gap='6' justifyContent='flex-start' py='10' h='100%'>
-                        <Flex w='384px' p='5' gap='5'  border='1px solid' borderColor='#C8CBCD' borderRadius='lg' overflow='hidden' alignItems='center' flexDirection='column' >
+                    <Flex w='100%' gap='6' justifyContent='flex-start' py='10' h='100%' flexDir={{base: 'column', md: 'row'}}>
+                        <Flex w={{base: 'none', md:'384px'}} p='5' gap='5'  border='1px solid' borderColor='#C8CBCD' borderRadius='lg' overflow='hidden' alignItems='center' flexDirection='column' >
                             <Flex w='100%'>
                                 <Icon viewBox="0 0 45 45" w='70px' height='70px' color='#FFDD00'>
                                     <path
@@ -75,7 +75,7 @@ class ServiceSectionComponent extends React.Component {
                                 </Flex> 
                             </Flex>                                                 
                         </Flex>
-                        <Flex w='384px' p='5' gap='5'  border='1px solid' borderColor='#C8CBCD' borderRadius='lg' overflow='hidden' alignItems='center' flexDirection='column' >
+                        <Flex w={{base: 'none', md:'384px'}} p='5' gap='5'  border='1px solid' borderColor='#C8CBCD' borderRadius='lg' overflow='hidden' alignItems='center' flexDirection='column' >
                             <Flex w={'100%'}>
                                 <Icon viewBox="0 0 45 45" w='70px' h='70px' color='#FFDD00'>
                                     <path
@@ -116,7 +116,7 @@ class ServiceSectionComponent extends React.Component {
                                 </Flex> 
                             </Flex>                                                 
                         </Flex>
-                        <Flex w='384px' p='5' gap='5'  border='1px solid' borderColor='#C8CBCD' borderRadius='lg' overflow='hidden' alignItems='center' flexDirection='column' >
+                        <Flex w={{base: 'none', md:'384px'}} p='5' gap='5'  border='1px solid' borderColor='#C8CBCD' borderRadius='lg' overflow='hidden' alignItems='center' flexDirection='column' >
                             <Flex w={'100%'}>
                                 <Icon viewBox="0 0 45 45" w='70px' h='70px' color='#FFDD00'>
                                     <g clipPath="url(#clip0_9856_486)">

@@ -22,7 +22,7 @@ class DiscoverCardComponent extends React.Component {
                             borderRadius='lg'
                             w='44px'
                             h='44px'   
-                            bg='#F3F5F6' 
+                            bg={{base: 'none', md: '#F3F5F6'}} 
                             alignItems='center'
                             justifyContent='center'
                             cursor='pointer'
@@ -33,7 +33,7 @@ class DiscoverCardComponent extends React.Component {
                             borderRadius='lg'
                             w='44px'
                             h='44px'
-                            bg='#F3F5F6'
+                            bg={{base: 'none', md: '#F3F5F6'}}
                             alignItems='center'
                             justifyContent='center'
                             cursor='pointer'

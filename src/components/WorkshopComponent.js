@@ -8,9 +8,9 @@ class WorkshopComponent extends Component {
       <VStack w='100%'>
         <Flex flexDir='column' alignItems='center'>
             <Flex  maxW='1440px' justifyContent='center' alignItems='center'>
-                <Flex justifyContent='center' w='100%' flexDir='column' px='120px' pb='20' mx='auto'>
-                    <Flex fontSize='60px' pt='2' justifyContent='center' fontWeight='600' gap='3' w='100%'  lineHeight='3.75rem' pt='2'>
-                        Ecco perché dovresti scegliere
+                <Flex justifyContent='center' w='100%' flexDir='column' px={{base: '60px', md: '120px'}} pb='20' mx='auto'>
+                    <Flex fontSize={{base:'32px', md:'60px'}} pt='2' justifyContent='center' fontWeight='600' gap='3' w='100%' alignItems='center' flexDir={{base: 'column', md: 'row'}}  lineHeight='3.75rem'>
+                        <Text as='span'> Ecco perché dovresti scegliere</Text>
                         <Text as='span' color='#B3B6B9'>Driver</Text>
                     </Flex>
                     <Text fontWeight='500' maxW='920px' 

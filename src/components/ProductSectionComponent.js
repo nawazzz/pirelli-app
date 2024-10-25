@@ -49,7 +49,7 @@ class ProductSectionComponent extends React.Component {
                             <Text fontSize='32px' fontWeight='700'>CINTURATO P7 ALL SEASON</Text>
                             <Button w='fit-content' bg='#F3F5F6' mt='auto'>Trova la tua gomma</Button>
                             <Flex as='a'
-                                h='330px'
+                                h={{base: 'none', md: '330px'}}
                                 position='relative'
                                 alignItems='center'
                                 justifyContent='center'                                    
@@ -97,7 +97,7 @@ class ProductSectionComponent extends React.Component {
                             <Text >PRESTAZIONI ESTREME SU STRADA E SU PISTA</Text>
                             <Button w='fit-content' bg='#F3F5F6' mt='auto'>Trova la tua gomma</Button>
                             <Flex as='a'
-                                h='330px'
+                                h={{base: 'none', md: '330px'}}
                                 position='relative'
                                 alignItems='center'
                                 justifyContent='center'                                    
@@ -144,7 +144,7 @@ class ProductSectionComponent extends React.Component {
                             <Text fontSize='32px' fontWeight='700'>SCORPION</Text>
                             <Button w='fit-content' bg='#F3F5F6' mt='auto'>Trova la tua gomma</Button>
                             <Flex as='a'
-                                h='330px'
+                                h={{base: 'none', md: '330px'}}
                                 position='relative'
                                 alignItems='center'
                                 justifyContent='center'                                    

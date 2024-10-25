@@ -85,10 +85,10 @@ class FooterComponent extends Component {
             </Flex>
         </Flex>
         <Flex w='100%' borderBottom='1px solid' borderColor='#494D52'>
-            <Flex w='100%' maxW='1440px' px='120px' mx='auto'>
-                <Flex py='8' flexDir='column' gap='4'  w='100%'>
-                    <Text fontSize='16px' fontWeight='700'>Driver in Europa</Text>
-                    <Flex flexDir='column' gap='2' fontSize='14px' lineHeight='1.25rem' fontWeight='600'>
+            <Flex w='100%' maxW='1440px' px={{base: '5', md: '120px'}} mx='auto' flexDir={{base: 'column', md: 'row'}}>
+                <Flex py='8' flexDir='column' gap='4'  w='100%' borderBottom={{base: '1px solid', md: 'none'}} borderColor='#494D52'>
+                    <Text fontSize={{base: '22px', md: '16px'}} lineHeight={{base: '2.25rem', md: '1.25rem'}} fontWeight='700'>Driver in Europa</Text>
+                    <Flex flexDir='column' gap='2' fontSize={{base: '20px', md: '14px'}} lineHeight={{base: '2.25rem', md: '1.25rem'}} fontWeight='600'>
                         <Text cursor='pointer'>Svezia</Text>
                         <Text cursor='pointer'>Germania</Text>
                         <Text cursor='pointer'>Spagna</Text>
@@ -101,9 +101,9 @@ class FooterComponent extends Component {
                         <Text cursor='pointer'>Finlandia</Text>
                     </Flex>                    
                 </Flex>
-                <Flex py='8' flexDir='column' gap='4'  w='100%'>
+                <Flex py='8' flexDir='column' gap='4'  w='100%' borderBottom={{base: '1px solid', md: 'none'}} borderColor='#494D52'>
                     <Text></Text>
-                    <Flex flexDir='column' gap='2' fontSize='14px' lineHeight='1.25rem' fontWeight='600'>
+                    <Flex flexDir='column' gap='2' fontSize={{base: '20px', md: '14px'}} lineHeight={{base: '2.25rem', md: '1.25rem'}} fontWeight='600'>
                         <Text cursor='pointer'>Servizi</Text>
                         <Text cursor='pointer'>Promozioni</Text>
                         <Text cursor='pointer'>Leasing Auto e Flotte</Text>
@@ -116,7 +116,7 @@ class FooterComponent extends Component {
                 </Flex>
                 <Flex py='8' flexDir='column' gap='4'  w='100%'>
                     <Text></Text>
-                    <Flex flexDir='column' gap='2' fontSize='14px' lineHeight='1.25rem' fontWeight='600'>
+                    <Flex flexDir='column' gap='2' fontSize={{base: '20px', md: '14px'}} lineHeight={{base: '2.25rem', md: '1.25rem'}} fontWeight='600'>
                         <Text cursor='pointer'>Consigli dell'esperto</Text>
                         <Text cursor='pointer'>Aquaplaning</Text>
                         <Text cursor='pointer'>Struttura di uno pneumatico</Text>
@@ -129,9 +129,9 @@ class FooterComponent extends Component {
             </Flex>          
         </Flex>
         <Flex w='100%'>
-            <Flex w='100%' maxW='1440px' px='120px' py='4' mx='auto' fontSize='12px' justifyContent='center' gap='4' flexDir='column' alignItems='center'>
+            <Flex w='100%' maxW='1440px' px={{base: '5', md: '120px'}} py='4' mx='auto' fontSize={{base: '20px', md: '14px'}} lineHeight={{base: '2.25rem', md: '1.25rem'}}  justifyContent='flex-start' gap='4' flexDir='column' alignItems={{base: 'none', md:'center'}}>
                 <Text fontWeight='700'>© 2024 Copyright Driver (Suisse) SA</Text>
-                <Flex gap='6' fontWeight='600'>
+                <Flex gap='6' fontWeight='600' flexDir={{base: 'column', md: 'row'}}>
                     <Text cursor='pointer'>Privacy Policy</Text>
                     <Text cursor='pointer'>Cookie Policy</Text>
                     <Text cursor='pointer'>Termini e condizioni</Text>

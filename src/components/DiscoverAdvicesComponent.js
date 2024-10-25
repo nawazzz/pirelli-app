@@ -6,11 +6,12 @@ import workshopImage from '../logos/image-nostri-consigli-comp.jpg'
 class DiscoverAdvicesComponent extends Component {
   render() {
     return (
-      <VStack w='100%' px='120px' mx='auto' maxW='1440px' py='20' >
+      <VStack w='100%' px={{base: '60px', md: '120px'}} mx='auto' maxW='1440px' py='20' >
         <Flex 
             w='100%'
             gap='10'
             justifyContent='space-between' lineHeight='1.5'
+            flexDir={{base: 'column', md: 'row'}}
         >
             <Flex w='100%' >
                 <Image src={workshopImage}
@@ -22,7 +23,7 @@ class DiscoverAdvicesComponent extends Component {
                 />
             </Flex>
             <Flex flexDir='column' w='100%'>
-                <Flex fontSize='60px' fontWeight='600' gap='3' w='100%'  lineHeight='3.75rem' pt='2'>
+                <Flex fontSize='60px' fontWeight='600' gap='3' w='100%'  lineHeight={{base:'1', md:'3.75rem'}} pt='2' >
                     I nostri
                     <Text as='span' color='#B3B6B9'>consigli</Text>
                 </Flex>
