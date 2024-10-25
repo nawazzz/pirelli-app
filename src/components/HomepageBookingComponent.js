@@ -5,17 +5,17 @@ import {Icon} from '@chakra-ui/icons'
 class HomepageBookingComponent extends React.Component {
     render() {
         return(
-            <VStack w='100%' px='120px'>
+            <VStack w='100%' px={{base: '60px', md: '120px'}}>
                 <Flex w='100%' px='20px' flexDir='column' justifyContent='center' gap='8'>
                     <Flex flexDir='column' justifyContent='center'>
                         <Flex fontSize='40px' lineHeight='3rem' fontWeight='600'  justifyContent='center' >
-                            <Text color='black'>Prenotare online è facile e </Text>
+                            <Text color='black' whiteSpace={{base: 'nowrap', md: 'none'}}>Prenotare online è facile e </Text>
                             <Text color='#B3B6B9' px='10px'> veloce </Text>
                         </Flex>
                         <Text textAlign='center'>Cerca il rivenditore più vicino a te, decidi l'acquisto di un pneumatico o prenota direttamente il servizio e l'appuntamento desiderato.</Text>
                     </Flex>
-                    <Flex pt='10' pb='6' gap='6' w='100%' mx='auto' justifyContent='center'>
-                        <Flex w='282px'>
+                    <Flex pt='10' pb='6' gap='6' w='100%' mx='auto' justifyContent='center' flexDir={{base: 'column', md: 'row'}}>
+                        <Flex w={{base: '', md:'282px'}}>
                             <Flex flexDir='column' alignItems='center' gap='6'>
                                 <Icon viewBox="0 0 45 45" w='70px' h='70px' >
                                     <g clipPath="url(#clip0_11536_230)">
@@ -87,7 +87,7 @@ class HomepageBookingComponent extends React.Component {
                                 </Box>
                             </Flex>
                         </Flex>
-                        <Flex justifyContent='center' w='282px'>
+                        <Flex justifyContent='center' w={{base: '', md:'282px'}}>
                             <Flex flexDir='column' alignItems='center' gap='6'>
                                 <Icon viewBox="0 0 45 45" w='70px' h='70px'>
                                     <g clipPath="url(#clip0_11536_252)">
@@ -161,7 +161,7 @@ class HomepageBookingComponent extends React.Component {
                                 </Box>
                             </Flex>
                         </Flex>
-                        <Flex w='282px' justifyContent='center'>
+                        <Flex w={{base: '', md:'282px'}} justifyContent='center'>
                             <Flex flexDir='column' alignItems='center' gap='6'>
                                 <Icon viewBox="0 0 45 45" w='70px' h='70px' >
                                     <g clipPath="url(#clip0_11536_262)">
@@ -221,7 +221,7 @@ class HomepageBookingComponent extends React.Component {
                                 </Box> 
                             </Flex>                           
                         </Flex>
-                        <Flex w='282px'>
+                        <Flex w={{base: '', md:'282px'}}>
                             <Flex flexDir='column' alignItems='center' gap='6'>
                                 <Icon viewBox="0 0 45 45" w='70px' h='70px' >
                                     <g clipPath="url(#clip0_11536_269)">

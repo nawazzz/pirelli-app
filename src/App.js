@@ -16,6 +16,7 @@ import DiscoverFAQComponent from './components/DiscoverFAQComponent';
 import DriverCenterNetwork from './components/DriverCenterNetwork';
 import WorkshopComponent from './components/WorkshopComponent';
 import FooterComponent from './components/FooterComponent';
+import NewHeader from './components/NewHeader';
 
 class App extends React.Component {
   constructor(props) {
@@ -77,9 +78,9 @@ class App extends React.Component {
   render() {
     return(
       <ChakraProvider>
-        <VStack minH='100vh' w='100%' minWidth={{ base: '100vh', md: 'none'}} display='flex' flexDir='column'>
-            <VStack w='100%' position='fixed' bg='#F3F5F6'>
-              <Header handleBookingPopup={this.handleBookingPopup}/>
+        <VStack minH='100vh' w='100%' minWidth={{ base: '100vh', lg: 'none', xl:'none',  md: 'none'}} display='flex' flexDir='column'>
+            <VStack w='100%'>
+              <NewHeader handleBookingPopup={this.handleBookingPopup}/>
             {/* <VStack>
               <SubHeader headerList={this.state.headerList}/>
             </VStack> */}
@@ -87,7 +88,7 @@ class App extends React.Component {
           <VStack w='100%' h='100%'>
             <TitleComponent handleBookingWindow={this.handleBookingWindow} />
           </VStack>
-          <VStack w='100%' mt='-60px'>
+          <VStack w='100%' mt={{base:'150px', md:'-60px'}}>
             <HomepageBookingComponent  />
           </VStack>
           <VStack w='100%' mt='20'>
