@@ -44,7 +44,7 @@ class DiscoverCardComponent extends React.Component {
                 </Flex>
                 <Flex gap='6' w='100%' pt='40px' overflow='visible' flexDir={{base: 'column', md: 'row'}}>
                     <Flex
-                        w={{base: '', md: '646px'}}
+                        w={{base: '', md: '646px', sm: '440px'}}
                         backgroundImage={discoverImageOne}
                         backgroundSize='100% 100%'
                         backgroundPosition='0% 0%'
@@ -84,7 +84,7 @@ class DiscoverCardComponent extends React.Component {
                         </Flex>
                     </Flex>
                     <Flex
-                        w={{base: '', md: '646px'}}
+                        w={{base: '', md: '646px', sm: '440px'}}
                         backgroundImage={discoverImageTwo}
                         backgroundSize='100% 100%'
                         backgroundPosition='0% 0%'

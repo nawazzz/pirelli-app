@@ -1,6 +1,6 @@
-import './App.css';
+import './App.scss';
 import React from 'react';
-import { ChakraProvider, Box, VStack } from '@chakra-ui/react'
+import { ChakraProvider, Box, VStack, Container } from '@chakra-ui/react'
 import Header from './components/Header';
 import ContentBookAppointment from './components/ContentBookAppointment';
 import SubHeader from './components/SubHeader';
@@ -17,6 +17,7 @@ import DriverCenterNetwork from './components/DriverCenterNetwork';
 import WorkshopComponent from './components/WorkshopComponent';
 import FooterComponent from './components/FooterComponent';
 import NewHeader from './components/NewHeader';
+import  SwiperWrapper  from './components/SwiperWrapper';
 
 class App extends React.Component {
   constructor(props) {
@@ -78,7 +79,8 @@ class App extends React.Component {
   render() {
     return(
       <ChakraProvider>
-        <VStack minH='100vh' w='100%' minWidth={{ base: '100vh', lg: 'none', xl:'none',  md: 'none'}} display='flex' flexDir='column'>
+        <div className='app-container'>
+        {/* <VStack minH='100vh' w='100%' minWidth={{ base: '100vh' }} display='flex' flexDir='column' flex='1 1 0%' outline= '0px'> */}
             <VStack w='100%'>
               <NewHeader handleBookingPopup={this.handleBookingPopup}/>
             {/* <VStack>
@@ -116,6 +118,9 @@ class App extends React.Component {
           <VStack w='100%'>
             <FooterComponent/>
           </VStack>
+          <Container>
+            <SwiperWrapper/>
+          </Container>
 
         { this.state.openBookingModal === true && 
           <VStack position='relative' zIndex='1'>
@@ -141,7 +146,8 @@ class App extends React.Component {
 
           
 
-        </VStack>
+        {/* </VStack> */}
+        </div>
     </ChakraProvider>
     )
   }

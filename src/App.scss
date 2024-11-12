@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.app-container {
+  min-height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  outline: 0px;
+  @media (max-width: 480px) {
+    min-width: 50vh;
+}
+}
