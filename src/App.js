@@ -118,9 +118,9 @@ class App extends React.Component {
           <VStack w='100%'>
             <FooterComponent/>
           </VStack>
-          <Container>
+          {/* <Container>
             <SwiperWrapper/>
-          </Container>
+          </Container> */}
 
         { this.state.openBookingModal === true && 
           <VStack position='relative' zIndex='1'>
