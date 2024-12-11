@@ -183,17 +183,61 @@
                                 </Flex>
                             </Flex>
                         </Flex>
-                        <TireFitment title={'WINTER 190 SNOWCONTROL SERIES'}/>
-                        <TireFitment title={'CINTURATO WINTER'}/>
-                        <TireFitment title={'POWERGY'}/>
-                        <TireFitment title={'CINTURATO ALL SEASON SF3'}/>
-                        <TireFitment title={'CINTURATO WINTER 2'}/>
-                        <TireFitment title={'CINTURATO ALL SEASON SF3'}/>
-                        <TireFitment title={'CINTURATO WINTER 2'}/>
-                        <TireFitment title={'CINTURATO ALL SEASON SF3'}/>
-                        <TireFitment title={'CINTURATO P7'}/>
-                        <TireFitment title={'CINTURATO P7 (P7C2)'}/>
-                        <TireFitment title={'CINTURATO P1'}/>
+                        <TireFitment 
+                            title={'WINTER 190 SNOWCONTROL SERIES'}
+                            priceOriginal='151,00'
+                            priceDiscounted='139,00'                        
+                        />
+                        <TireFitment 
+                            title={'CINTURATO WINTER'}
+                            priceOriginal='200,00'
+                            priceDiscounted='150,00'
+                        />
+                        <TireFitment 
+                            title={'POWERGY'}
+                            priceOriginal='121,00'
+                            priceDiscounted='99,00'                        
+                        />
+                        <TireFitment 
+                            title={'CINTURATO ALL SEASON SF3'}
+                            priceOriginal='101,00'
+                            priceDiscounted='89,00'
+                        />
+                        <TireFitment 
+                            title={'CINTURATO WINTER 2'}
+                            priceOriginal='181,00'
+                            priceDiscounted='129,00'
+                        />
+                        <TireFitment 
+                            title={'CINTURATO ALL SEASON SF3'}
+                            priceOriginal='151,00'
+                            priceDiscounted='139,00'
+                        />
+                        <TireFitment 
+                            title={'CINTURATO WINTER 2'}
+                            priceOriginal='191,00'
+                            priceDiscounted='169,00'
+                        />
+                        <TireFitment 
+                            title={'CINTURATO ALL SEASON SF3'}
+                            priceOriginal='199,00'
+                            priceDiscounted='159,00'
+                        />
+                        <TireFitment 
+                            title={'CINTURATO P7'}
+                            priceOriginal='251,00'
+                            priceDiscounted='149,00'
+                        />
+                        <TireFitment 
+                            title={'CINTURATO P7 (P7C2)'}
+                            priceOriginal='161,00'
+                            priceDiscounted='109,00'
+                        />
+                        <TireFitment 
+                            title={'CINTURATO P1'}
+                            priceOriginal='131,00'
+                            priceDiscounted='112,00'
+                        />
                     </Flex>
                     <Flex justifyContent='center' pt='5' pb='10'>
                         <Button>Più risultati</Button>

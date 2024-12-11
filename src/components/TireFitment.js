@@ -83,8 +83,8 @@ class TireFitment extends Component {
                                 <Flex justifyContent='space-between' py='2'>
                                     <Text fontSize='0.875rem' lineHeight='1.25rem' color='#5E6267' fontWeight='600'></Text>
                                     <Flex gap='2' alignItems='center'>
-                                        <Text as='a' cursor='pointer' textDecoration='line-through' fontSize='0.875rem' lineHeight='1.25rem' fontWeight='700'>CHF 95,00</Text>
-                                        <Text as='a' cursor='pointer' color='#027A48' fontSize='1.25rem' lineHeight='1.875rem' fontWeight='700'>CHF 89,00</Text>
+                                        <Text as='a' cursor='pointer' textDecoration='line-through' fontSize='0.875rem' lineHeight='1.25rem' fontWeight='700'>CHF {this.props.priceDiscounted}</Text>
+                                        <Text as='a' cursor='pointer' color='#027A48' fontSize='1.25rem' lineHeight='1.875rem' fontWeight='700'>CHF {this.props.priceOriginal}</Text>
                                     </Flex>
                                 </Flex>
                                 <Flex gap='5' w='100%'>
