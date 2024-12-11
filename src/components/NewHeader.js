@@ -16,7 +16,7 @@ class NewHeader extends React.Component {
     return (
         <Flex w='100%' position='relative' zIndex='1'>
             <Flex w='100%' bg='#F3F5F6' justifyContent='center' position='fixed'>
-                <Flex w='100%' py={{base: '6', md: '4'}} maxW='1440px' alignItems='center' px={{base: '40px', md:'120px'}}>
+                <Flex w='100%' py={{base: '6', md: '4'}} maxW='1440px' alignItems='center' px={{base: '25px', md:'120px'}}>
                     <Flex justifyContent='space-between' w='100%'>
                         <Flex gap='4' justifyContent='center' alignItems='center'>
                             <Box cursor='pointer'>

@@ -191,7 +191,7 @@ class ProductSectionComponent extends React.Component {
                             navigation
                             pagination={{ clickable: true }}
                             scrollbar={{ draggable: true }}
-                            // scrollbar={window.innerWidth < 1024 ? {draggable: true} : false}
+                            // scrollbar={window.innerWidth < 1024 ? {draggable: true} : false}    
                             onSwiper={(swiper) => console.log(swiper)}
                             onSlideChange={() => console.log('slide change')}
                             overflow='visible'

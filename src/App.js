@@ -18,6 +18,8 @@ import WorkshopComponent from './components/WorkshopComponent';
 import FooterComponent from './components/FooterComponent';
 import NewHeader from './components/NewHeader';
 import  SwiperWrapper  from './components/SwiperWrapper';
+import { Switch, Route, Routes, useParams, Link } from 'react-router-dom';
+import Fitment from './components/Fitment';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,9 +32,17 @@ class App extends React.Component {
       inputValueTwo: '',
       inputValueThree: '',
       saveInputValue: '',
-      headerList: ['Service', 'Reifen', 'Felgen', 'Aktuelles', 'Geschäftskunden', 'Tipps', 'Karriere', 'Händler Login']
+      headerList: ['Service', 'Reifen', 'Felgen', 'Aktuelles', 'Geschäftskunden', 'Tipps', 'Karriere', 'Händler Login'],
+      isFitment: true,
+      voucherInput: '',
     }
   }
+
+  // componentDidMount() {
+  //   this.setState({
+  //     isFitment: false
+  //   })
+  // }
 
   handleBookingPopup = () => {
     console.log('lele')
@@ -76,10 +86,39 @@ class App extends React.Component {
 
   }
 
+  handleVoucherInput = (event) => {
+    console.log(event)
+    this.setState({
+      voucherInput: event.target.value
+    })
+  }
+
+  handleButton = () => {
+    this.setState({
+      voucherInput: ''
+    })
+  }
+
+  handleKeyPress = (event) => {
+    console.log(event)
+    this.handleButton()
+  }
+
   render() {
     return(
       <ChakraProvider>
-        <div className='app-container'>
+      <div>
+        {
+          this.state.isFitment ? (
+            <div>
+              <NewHeader handleBookingPopup={this.handleBookingPopup}/>
+              <VStack mt='100px'>
+                <Fitment voucherInput={this.state.voucherInput} handleVoucherInput={this.handleVoucherInput} 
+                handleButton={this.handleButton} handleKeyPress={this.props.handleKeyPress}/>
+              </VStack>
+            </div>
+          ) : (
+            <div className='app-container'>
         {/* <VStack minH='100vh' w='100%' minWidth={{ base: '100vh' }} display='flex' flexDir='column' flex='1 1 0%' outline= '0px'> */}
             <VStack w='100%'>
               <NewHeader handleBookingPopup={this.handleBookingPopup}/>
@@ -87,6 +126,13 @@ class App extends React.Component {
               <SubHeader headerList={this.state.headerList}/>
             </VStack> */}
             </VStack>
+        {/* <Routes>
+          <Route
+            exact 
+            path='/fitment'
+            Component={() => <Fitment />}
+          />
+        </Routes> */}
           <VStack w='100%' h='100%'>
             <TitleComponent handleBookingWindow={this.handleBookingWindow} />
           </VStack>
@@ -115,13 +161,19 @@ class App extends React.Component {
           <VStack w='100%' mt='20'>
             <WorkshopComponent/>
           </VStack>
-          <VStack w='100%'>
-            <FooterComponent/>
-          </VStack>
+        
           {/* <Container>
             <SwiperWrapper/>
           </Container> */}
 
+        
+
+          
+
+        {/* </VStack> */}
+        </div>
+          )    
+        }
         { this.state.openBookingModal === true && 
           <VStack position='relative' zIndex='1'>
             <ContentBookAppointment openBookingModal={this.state.openBookingModal} handleCloseIncon={this.handleCloseIncon} handleBookingWindow={this.handleBookingWindow}/>
@@ -143,11 +195,10 @@ class App extends React.Component {
             <TireDetailsDrawer handleCloseIncon={this.handleCloseIncon}/>
           </VStack>
         }
-
-          
-
-        {/* </VStack> */}
-        </div>
+        <VStack w='100%'>
+            <FooterComponent/>
+          </VStack>
+      </div>
     </ChakraProvider>
     )
   }
