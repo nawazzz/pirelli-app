@@ -35,6 +35,105 @@ class App extends React.Component {
       headerList: ['Service', 'Reifen', 'Felgen', 'Aktuelles', 'Geschäftskunden', 'Tipps', 'Karriere', 'Händler Login'],
       isFitment: true,
       voucherInput: '',
+      fitmentList: [
+        {
+          title: 'CINTURATO WINTER 2',
+          priceDiscounted: '191,00',
+          priceOriginal: '169,00',
+          consumptionValue: 'A',
+          gripValue: 'B',
+          soundValue: '70dB'
+        },
+        {
+          title: 'WINTER 190 SNOWCONTROL SERIES',
+          priceDiscounted: '151,00',
+          priceOriginal: '139,00',     
+          consumptionValue: 'C',
+          gripValue: 'B',
+          soundValue: '71dB'
+
+        },
+        {
+          title: 'CINTURATO WINTER',
+          priceDiscounted: '200,00',
+          priceOriginal: '150,00',
+          consumptionValue: 'B',
+          gripValue: 'C',
+          soundValue: '72dB'
+        },
+        {
+          title: 'POWERGY',
+          priceDiscounted: '121,00',
+          priceOriginal: '99,00',   
+          consumptionValue: 'A',
+          gripValue: 'A',
+          soundValue: '70dB'
+        },
+        {
+          title: 'CINTURATO ALL SEASON SF3',
+          priceDiscounted: '101,00',
+          priceOriginal: '89,00',
+          consumptionValue: 'B',
+          gripValue: 'B',
+          soundValue: '69dB'
+        },
+        { 
+          title: 'CINTURATO WINTER 2',
+          priceDiscounted: '181,00',
+          priceOriginal: '129,00',
+          consumptionValue: 'C',
+          gripValue: 'A',
+          soundValue: '72dB'
+      },
+      { 
+          title: 'CINTURATO ALL SEASON SF3',
+          priceDiscounted: '151,00',
+          priceOriginal: '139,00',
+          consumptionValue: 'B',
+          gripValue: 'C',
+          soundValue: '71dB'
+      },
+      { 
+          title: 'CINTURATO WINTER 2',
+          priceDiscounted: '191,00',
+          priceOriginal: '169,00',
+          consumptionValue: 'A',
+          gripValue: 'B',
+          soundValue: '70dB'
+      },
+      { 
+          title: 'CINTURATO ALL SEASON SF3',
+          priceDiscounted: '199,00',
+          priceOriginal: '159,00',
+          consumptionValue: 'B',
+          gripValue: 'C',
+          soundValue: '69dB'
+      },
+      { 
+          title: 'CINTURATO P7',
+          priceDiscounted: '251,00',
+          priceOriginal: '149,00',
+          consumptionValue: 'A',
+          gripValue: 'B',
+          soundValue: '72dB'
+      },
+      { 
+          title: 'CINTURATO P7 (P7C2)',
+          priceDiscounted: '161,00',
+          priceOriginal: '109,00',
+          consumptionValue: 'C',
+          gripValue: 'B',
+          soundValue: '71dB'
+      },
+      { 
+          title: 'CINTURATO P1',
+          priceDiscounted: '131,00',
+          priceOriginal: '112,00',
+          consumptionValue: 'A',
+          gripValue: 'C',
+          soundValue: '70dB'
+      },
+      ]
     }
   }
 
@@ -114,7 +213,9 @@ class App extends React.Component {
               <NewHeader handleBookingPopup={this.handleBookingPopup}/>
               <VStack mt='100px'>
                 <Fitment voucherInput={this.state.voucherInput} handleVoucherInput={this.handleVoucherInput} 
-                handleButton={this.handleButton} handleKeyPress={this.props.handleKeyPress}/>
+                handleButton={this.handleButton} handleKeyPress={this.props.handleKeyPress}
+                fitmentList={this.state.fitmentList}
+                />
               </VStack>
             </div>
           ) : (
