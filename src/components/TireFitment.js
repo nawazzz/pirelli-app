@@ -7,7 +7,10 @@ import logoPirelli from '../logos/pirelli.png';
 class TireFitment extends Component {
   render() {
     return (
-        <Flex flexDir='column' gap='5' border='1px solid' borderColor='#C8CBCD' borderRadius='lg' maxW={{base: '100%', md: 'calc(48% - 8px)',  lg:'calc(33% - 8px)'}} p='15px'>
+        <Flex flexDir='column' gap='5' border='1px solid' borderColor='#C8CBCD' borderRadius='lg' 
+        // maxW={{base: '100%', sm: 'calc(48% - 8px)',  md:'calc(33% - 8px)'}} 
+        w='384px'
+        p='15px'>
                         {/* <Flex
                             w='fit-content'
                             flexDir='column' padding='20px' overflow='hidden'
