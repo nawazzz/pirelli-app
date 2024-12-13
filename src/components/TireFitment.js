@@ -21,11 +21,27 @@ class TireFitment extends Component {
                                 <Image src={logoPirelli} />
                             </Flex>
                             <Text fontSize='1.25rem' lineHeight='1.875rem' fontWeight='700'>{this.props.title}</Text>
-                            <Flex  maxH='130px' overflow='hidden'>
-                                <Image src={fitmentLogo} alt={this.props.title}
-                                    width='100%' height='auto' position='unset' z-index='0' objectFit='cover'
-                                />
-                            </Flex>
+                            {/* <Flex
+                                position='relative'
+                                background='#f3f5f6'
+                                mt='auto'
+                                w='100%'
+                                borderRadius='md'
+                                overflow='hidden'
+                                maxH='130px'
+                            > */}
+                                <Flex  
+                                maxH='130px'
+                                overflow='hidden'
+                                w='100%'
+                                h='100%'
+                                
+                                >
+                                    <Image src={fitmentLogo} alt={this.props.title}
+                                        width='100%' height='auto' position='unset' z-index='0' objectFit='cover'
+                                    />
+                                </Flex>
+                            {/* </Flex> */}
 
                         {/* </Flex> */}
                         <Flex flexDir='column'>
@@ -76,8 +92,8 @@ class TireFitment extends Component {
                                     <Text fontSize='0.875rem' lineHeight='1.25rem' color='#5E6267' fontWeight='600'>Tecnologia:</Text>
                                     <Text fontSize='0.875rem' lineHeight='1.25rem' fontWeight='700'>-</Text>
                                 </Flex>
-                                <Flex justifyContent='space-between' borderBottom='1px solid' borderColor='#E2E8F0' py='2' cursor='pointer'>
-                                    <Text fontSize='0.875rem' lineHeight='1.25rem' textDecoration='underline' color='#5E6267' fontWeight='700'>Etichettatura energetica
+                                <Flex justifyContent='space-between' borderBottom='1px solid' borderColor='#E2E8F0' py='2' >
+                                    <Text cursor='pointer' fontSize='0.875rem' lineHeight='1.25rem' textDecoration='underline' color='#5E6267' fontWeight='700'>Etichettatura energetica
                                         <Text as='span' pl='2px'><ArrowUpIcon transform='rotate(45deg)'/></Text>
                                     </Text>
                                     <Flex gap='1' alignItems='center'>
