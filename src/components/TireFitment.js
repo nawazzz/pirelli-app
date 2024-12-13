@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Flex, Image, Button, Text, Select } from '@chakra-ui/react'
+import { Flex, Image, Button, Text, Select, Box } from '@chakra-ui/react'
 import { Icon, ArrowUpIcon } from '@chakra-ui/icons'
 import fitmentLogo from '../logos/tire-fitment.png';    
 import logoPirelli from '../logos/pirelli.png';
@@ -21,27 +21,20 @@ class TireFitment extends Component {
                                 <Image src={logoPirelli} />
                             </Flex>
                             <Text fontSize='1.25rem' lineHeight='1.875rem' fontWeight='700'>{this.props.title}</Text>
-                            {/* <Flex
-                                position='relative'
-                                background='#f3f5f6'
-                                mt='auto'
+                            <Box
+                                as='a'
                                 w='100%'
-                                borderRadius='md'
-                                overflow='hidden'
                                 maxH='130px'
-                            > */}
+                                overflow='hidden'
+                            >
                                 <Flex  
-                                maxH='130px'
-                                overflow='hidden'
-                                w='100%'
-                                h='100%'
-                                
+                                w='100%'                                    
                                 >
                                     <Image src={fitmentLogo} alt={this.props.title}
-                                        width='100%' height='auto' position='unset' z-index='0' objectFit='cover'
+                                        width='100%'  objectFit='cover'
                                     />
                                 </Flex>
-                            {/* </Flex> */}
+                            </Box>
 
                         {/* </Flex> */}
                         <Flex flexDir='column'>
