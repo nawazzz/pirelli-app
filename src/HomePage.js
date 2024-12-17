@@ -20,10 +20,8 @@ import NewHeader from './components/NewHeader';
 import  SwiperWrapper  from './components/SwiperWrapper';
 import { Switch, Route, Routes, useParams, Link } from 'react-router-dom';
 import Fitment from './components/Fitment';
-import HomePage from './HomePage';
-import Tire from './components/Tire';
 
-class App extends React.Component {
+class HomePage extends React.Component {
   constructor(props) {
     super(props) 
     this.state = {
@@ -36,6 +34,7 @@ class App extends React.Component {
       saveInputValue: '',
       headerList: ['Service', 'Reifen', 'Felgen', 'Aktuelles', 'Geschäftskunden', 'Tipps', 'Karriere', 'Händler Login'],
       isFitment: true,
+      showTirePage: false,
       voucherInput: '',
       fitmentList: [
         {
@@ -139,11 +138,11 @@ class App extends React.Component {
     }
   }
 
-  // componentDidMount() {
-  //   this.setState({
-  //     isFitment: false
-  //   })
-  // }
+//   componentDidMount() {
+//     this.setState({
+//       isFitment: false
+//     })
+//   }
 
   handleBookingPopup = () => {
     console.log('lele')
@@ -205,40 +204,111 @@ class App extends React.Component {
     this.handleButton()
   }
 
+  handleImageEvent = (event) => {
+    console.log(event, 'lelele')
+    this.setState({
+        showTirePage: !this.state.showTirePage
+    })
+  }
+
   render() {
     return(
-      <ChakraProvider>
-        <div>
-          <Routes>
-            <Route
-              exact 
-              path='/'
-              Component={() => <HomePage />}
-            />
-          </Routes>
-        <Routes>
+      <div>
+        {
+          this.state.isFitment ? (
+            <div>
+              <NewHeader handleBookingPopup={this.handleBookingPopup}/>
+              <VStack mt='100px'>
+                <Fitment voucherInput={this.state.voucherInput} handleVoucherInput={this.handleVoucherInput} 
+                    handleButton={this.handleButton} handleKeyPress={this.props.handleKeyPress}
+                    fitmentList={this.state.fitmentList} handleImageClick={this.handleImageEvent}
+                />
+              </VStack>
+            </div>
+          ) : (
+            <div className='app-container'>
+        {/* <VStack minH='100vh' w='100%' minWidth={{ base: '100vh' }} display='flex' flexDir='column' flex='1 1 0%' outline= '0px'> */}
+            <VStack w='100%'>
+              <NewHeader handleBookingPopup={this.handleBookingPopup}/>
+            {/* <VStack>
+              <SubHeader headerList={this.state.headerList}/>
+            </VStack> */}
+            </VStack>
+        {/* <Routes>
           <Route
             exact 
             path='/fitment'
-            Component={() => <Fitment voucherInput={this.state.voucherInput} handleVoucherInput={this.handleVoucherInput} 
-            handleButton={this.handleButton} handleKeyPress={this.props.handleKeyPress}
-            fitmentList={this.state.fitmentList}
-        />}
+            Component={() => <Fitment />}
           />
-        </Routes>
-        <Routes>
-            <Route
-              exact 
-              path='/pneumatici/auto/pirelli/cinturato/cinturato-p1'
-              Component={() => <Tire />}
-            />
-          </Routes>
+        </Routes> */}
+          <VStack w='100%' h='100%'>
+            <TitleComponent handleBookingWindow={this.handleBookingWindow} />
+          </VStack>
+          <VStack w='100%' mt={{base:'150px', md:'-60px'}}>
+            <HomepageBookingComponent  />
+          </VStack>
+          <VStack w='100%' mt='20'>
+            <DiscoverCardComponent  />
+            
+          </VStack>
+          <VStack w='100%' mt='20'>
+            <ProductSectionComponent/>
+          </VStack>
+          <VStack w='100%' mt='20'>
+            <ServiceSectionComponent/>
+          </VStack>
+          <VStack w='100%' mt='20' bg='#F3F5F6'>
+            <DiscoverAdvicesComponent/>
+          </VStack>
+          <VStack w='100%' mt='20'>
+            <DiscoverFAQComponent/>
+          </VStack>
+          <VStack w='100%' mt='20'>
+            <DriverCenterNetwork/>
+          </VStack>
+          <VStack w='100%' mt='20'>
+            <WorkshopComponent/>
+          </VStack>
+        
+          {/* <Container>
+            <SwiperWrapper/>
+          </Container> */}
+
+        
+
           
+
+        {/* </VStack> */}
         </div>
-      
-    </ChakraProvider>
+          )    
+        }
+        { this.state.openBookingModal === true && 
+          <VStack position='relative' zIndex='1'>
+            <ContentBookAppointment openBookingModal={this.state.openBookingModal} handleCloseIncon={this.handleCloseIncon} handleBookingWindow={this.handleBookingWindow}/>
+          </VStack>
+        }
+        {
+          this.state.openBookingWindow === true && 
+          <VStack position='relative' zIndex='1'>
+            <BookingWindow 
+              handleInputValue={this.handleInputValue} handleCloseIncon={this.handleCloseIncon} 
+              inputValueOne={this.state.inputValueOne} saveInputValue={this.state.saveInputValue}
+              inputValueTwo={this.state.inputValueTwo} inputValueThree={this.state.inputValueThree}
+              handleBookingWindowButton={this.handleBookingWindowButton}
+            />
+          </VStack>
+        }
+        { this.state.openTireDetailsDrawer === true &&
+          <VStack position='relative' zIndex='1'>
+            <TireDetailsDrawer handleCloseIncon={this.handleCloseIncon}/>
+          </VStack>
+        }
+        <VStack w='100%'>
+            <FooterComponent/>
+          </VStack>
+      </div>
     )
   }
 }
 
-export default App;
+export default HomePage;

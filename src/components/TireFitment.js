@@ -5,6 +5,10 @@ import fitmentLogo from '../logos/tire-fitment.png';
 import logoPirelli from '../logos/pirelli.png';
 
 class TireFitment extends Component {
+
+    handleClick = (event) => {
+        console.log(event)
+    }
   render() {
     return (
         <Flex flexDir='column' gap='5' border='1px solid' borderColor='#C8CBCD' borderRadius='lg' 
@@ -36,6 +40,7 @@ class TireFitment extends Component {
                                 >
                                     <Image src={fitmentLogo} alt={this.props.title}
                                         width='100%'  objectFit='cover'
+                                        onClick={(event) => this.props.handleClick(event)}
                                     />
                                 </Flex>
                             </Box>
