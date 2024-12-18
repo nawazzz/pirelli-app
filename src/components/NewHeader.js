@@ -10,6 +10,7 @@ import { Box,
 import driverLogo from '../logos/driver_logo.png';
 import cartIcon from '../logos/cart.jpg';
 import swissFlag from '../logos/swiss.jpg';
+import { Switch, Route, Routes, useParams, Link } from 'react-router-dom';
 
 class NewHeader extends React.Component {
   render() {
@@ -20,7 +21,9 @@ class NewHeader extends React.Component {
                     <Flex justifyContent='space-between' w='100%'>
                         <Flex gap='4' justifyContent='center' alignItems='center'>
                             <Box cursor='pointer'>
-                                <Image w='auto' h='5' src={driverLogo}/>
+                                <Link to='/'>
+                                    <Image w='auto' h='5' src={driverLogo} />
+                                </Link>
                             </Box>
                             <Box cursor='pointer'>
                                 <Image w='auto' h='5' src={swissFlag}/>

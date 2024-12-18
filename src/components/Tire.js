@@ -13,6 +13,24 @@ import FooterComponent from './FooterComponent';
 
 
 class Tire extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            isTireCinturatoP1: true,
+            isCinturato1: false,
+            isCinturato2: false,
+            isCinturato3: false,
+            isCinturato4: false
+        }
+    }
+    
+    handleCinturato = (event) => {
+        console.log(event)
+        this.setState({isTireCinturatoP1: false, isCinturato2: true
+        }, () => {console.log(this.state)})
+    }
+
+
   render() {
     const tireTopLink = ['HOME', 'PNEUMATICI', 'AUTO', 'PIRELLI', 'CINTURATO', 'CINTURATO P1']
     const performanceDefaultBoxes = 10;
@@ -30,6 +48,12 @@ class Tire extends Component {
             />
         );
     }
+    let isTireCinturatoP1 = true
+    let isCinturato1 = false
+    let isCinturato2 = false
+    let isCinturato3 = false
+    let isCinturato4 = false
+
     return (
         <VStack minW={{base: '100vh'}} w='100%'>
             <NewHeader/>
@@ -311,7 +335,13 @@ class Tire extends Component {
                                                     width='100%'
                                                     height='100%'                                        
                                                 >
-                                                    <Image src={tireCinturatoP1} alt='cinturato P1' 
+                                                    <Image src={isTireCinturatoP1 === true ? tireCinturatoP1 :
+                                                                isCinturato1 === true ? cinturato1 :
+                                                                isCinturato2 === true ? cinturato2 :
+                                                                isCinturato3 === true ? cinturato3 :
+                                                                isCinturato4 === true ? cinturato4 :
+                                                                tireCinturatoP1
+                                                    } alt='cinturato P1' 
                                                         objectFit='cover' w='100%'
                                                     />
                                                 </Flex>
@@ -338,7 +368,7 @@ class Tire extends Component {
                                                     borderColor='#E2E8F0'
                                                     borderRadius='lg'
                                             >
-                                                <Image src={cinturato1} objectFit='cover' w='100%'/>
+                                                <Image src={cinturato1} objectFit='cover' w='100%' onClick={(event) => this.handleCinturato(event) }/>
                                             </Flex>
                                         </Flex>
                                         <Flex h='100%' cursor='pointer' mt='2' mr='2'
@@ -359,7 +389,7 @@ class Tire extends Component {
                                                 borderColor='#E2E8F0'
                                                 borderRadius='lg'
                                         >
-                                            <Image src={cinturato2} objectFit='cover' w='100%' />
+                                            <Image src={cinturato2} objectFit='cover' w='100%' onClick={(event) => this.handleCinturato(event) } />
                                         </Flex>
                                         <Flex h='100%' cursor='pointer' mt='2' mr='2'
                                                 overflow='hidden'
@@ -379,7 +409,7 @@ class Tire extends Component {
                                                 borderColor='#E2E8F0'
                                                 borderRadius='lg'
                                         >
-                                            <Image src={cinturato3} objectFit='cover' w='100%' />
+                                            <Image src={cinturato3} objectFit='cover' w='100%' onClick={(event) => this.handleCinturato(event) } />
                                         </Flex>
                                         <Flex h='100%' cursor='pointer' mt='2' mr='2'
                                                 overflow='hidden'
@@ -400,7 +430,7 @@ class Tire extends Component {
                                                 borderRadius='lg'
                                                 _focusVisible={{border:'1px solid', borderColor: 'black'}}
                                         >
-                                            <Image src={cinturato4} objectFit='cover' w='100%' />
+                                            <Image src={cinturato4} objectFit='cover' w='100%' onClick={(event) => this.handleCinturato(event) } />
                                         </Flex>
                                     </Flex>
                                 </Flex>
