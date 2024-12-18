@@ -162,7 +162,9 @@ class TireFitment extends Component {
                                 </Flex>
                                 <Flex gap='5' w='100%'>
                                     <Select minW='80px' w='fit-content' placeholder='4' size='md' bg='#F3F5F6' fontSize='.875rem' lineHeight='1.25rem' fontWeight='600' />
-                                    <Button minW='fit-content' w='100%' fontSize='.875rem' lineHeight='1.25rem' fontWeight='700' bg='#FFDD00'>Prenota</Button>
+                                    <Link to='/it-ch/checkout' style={{width: '100%'}}>
+                                        <Button minW='fit-content' w='100%' fontSize='.875rem' lineHeight='1.25rem' fontWeight='700' bg='#FFDD00'>Prenota</Button>
+                                    </Link>
                                 </Flex>
                                 <Flex justifyContent='center' fontSize='0.75rem' lineHeight='1rem' fontWeight='600' pt='2' fontStyle='italic'>
                                     <Text>Prezzo per pneumatico - IVA inclusa</Text>

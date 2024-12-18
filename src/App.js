@@ -22,6 +22,7 @@ import { Switch, Route, Routes, useParams, Link } from 'react-router-dom';
 import Fitment from './components/Fitment';
 import HomePage from './HomePage';
 import Tire from './components/Tire';
+import HeaderCheckout from './components/HeaderCheckout';
 
 class App extends React.Component {
   constructor(props) {
@@ -231,6 +232,13 @@ class App extends React.Component {
               exact 
               path='/pneumatici/auto/pirelli/cinturato/cinturato-p1'
               Component={() => <Tire />}
+            />
+          </Routes>
+          <Routes>
+            <Route
+              exact 
+              path='/it-ch/checkout'
+              Component={() => <HeaderCheckout />}
             />
           </Routes>
           

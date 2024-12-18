@@ -9,6 +9,7 @@ import cinturato3 from '../logos/cinturato_gallery_3.png';
 import cinturato4 from '../logos/cinturato_gallery_4.png';
 import NewHeader from './NewHeader';
 import FooterComponent from './FooterComponent';
+import { Switch, Route, Routes, useParams, Link } from 'react-router-dom';
 
 
 
@@ -191,7 +192,9 @@ class Tire extends Component {
                                     </Flex>
                                     <Flex gap='2' w='fit-content' mt='-2'>
                                         <Select minW='80px' w='fit-content' placeholder='4' size='md' bg='#F3F5F6' fontSize='.875rem' lineHeight='1.25rem' fontWeight='600' />
-                                        <Button minW='44px' maxW='300px'  px='5' fontSize='.875rem' lineHeight='1.25rem' fontWeight='700' bg='#FFDD00'>Prenota</Button>
+                                        <Link to='/it-ch/checkout'>   
+                                            <Button minW='44px' maxW='300px'  px='5' fontSize='.875rem' lineHeight='1.25rem' fontWeight='700' bg='#FFDD00'>Prenota</Button>
+                                        </Link>
                                     </Flex>
                                     <Flex justifyContent='flex-start' fontSize='0.75rem' lineHeight='1rem' fontWeight='600' mt='-3' color='#73777B'>
                                         <Text>Prezzo per pneumatico - IVA inclusa</Text>
@@ -201,9 +204,9 @@ class Tire extends Component {
                                     </Flex>
                                     <Flex flexDir='column' gap='4'>
                                         <Text mt='12' fontSize='1.5rem' lineHeight='2rem' fontWeight='600'>Performance</Text>
-                                        <Flex gap='10'>
-                                            <Flex alignItems='center' flexDir='column' justifyContent='flex-start'>
-                                                <Text fontSize='1.25rem' lineHeight='1.875rem' fontWeight='600'>ASCIUTTO</Text>
+                                        <Flex gap='10' flexDir={{base: 'column', md: 'row'}} flexWrap='wrap'>
+                                            <Flex gap='2' alignItems='center' flexDir='column'w={{md: '230px'}} justifyContent='flex-start'>
+                                                <Text w='100%' textAlign='left' fontSize='1.25rem' lineHeight='1.875rem' fontWeight='600'>ASCIUTTO</Text>
                                                 <Flex w='100%' gap='1'>
                                                     <Text h='1' flex='1 1 40px' border='2px solid' borderColor='#33383E' borderRadius='2px'></Text>
                                                     <Text h='1' flex='1 1 40px' border='2px solid' borderColor='#33383E' borderRadius='2px'></Text>
@@ -217,8 +220,8 @@ class Tire extends Component {
                                                     <Text h='1' flex='1 1 40px' border='2px solid' borderColor='rgba(0, 0, 0, 0.1)' borderRadius='2px'></Text>
                                                 </Flex>
                                             </Flex>
-                                            <Flex alignItems='center' flexDir='column' justifyContent='flex-start'>
-                                            <Text fontSize='1.25rem' lineHeight='1.875rem' fontWeight='600'>SPORT</Text>
+                                        <Flex alignItems='center'w={{md: '230px'}} flexDir='column' justifyContent='flex-start'>
+                                            <Text w='100%' textAlign='left' fontSize='1.25rem' lineHeight='1.875rem' fontWeight='600'>SPORT</Text>
                                             <Flex w='100%' gap='1'>
                                                 <Text h='1' flex='1 1 40px' border='2px solid' borderColor='#33383E' borderRadius='2px'></Text>
                                                 <Text h='1' flex='1 1 40px' border='2px solid' borderColor='#33383E' borderRadius='2px'></Text>
@@ -232,8 +235,8 @@ class Tire extends Component {
                                                 <Text h='1' flex='1 1 40px' border='2px solid' borderColor='rgba(0, 0, 0, 0.1)' borderRadius='2px'></Text>
                                             </Flex>
                                         </Flex>
-                                        <Flex alignItems='center' flexDir='column' justifyContent='flex-start'>
-                                            <Text fontSize='1.25rem' lineHeight='1.875rem' fontWeight='600'>BAGNATO</Text>
+                                        <Flex alignItems='center'w={{md: '230px'}} flexDir='column' justifyContent='flex-start'>
+                                            <Text w='100%' textAlign='left' fontSize='1.25rem' lineHeight='1.875rem' fontWeight='600'>BAGNATO</Text>
                                             <Flex w='100%' gap='1'>
                                                 <Text h='1' flex='1 1 40px' border='2px solid' borderColor='#33383E' borderRadius='2px'></Text>
                                                 <Text h='1' flex='1 1 40px' border='2px solid' borderColor='#33383E' borderRadius='2px'></Text>
@@ -247,8 +250,8 @@ class Tire extends Component {
                                                 <Text h='1' flex='1 1 40px' border='2px solid' borderColor='rgba(0, 0, 0, 0.1)' borderRadius='2px'></Text>
                                             </Flex>
                                         </Flex>
-                                        <Flex alignItems='center' flexDir='column' justifyContent='flex-start'>
-                                            <Text fontSize='1.25rem' lineHeight='1.875rem' fontWeight='600'>COMFORT</Text>
+                                        <Flex alignItems='center'w={{md: '230px'}} flexDir='column' justifyContent='flex-start'>
+                                            <Text w='100%' textAlign='left' fontSize='1.25rem' lineHeight='1.875rem' fontWeight='600'>COMFORT</Text>
                                             <Flex w='100%' gap='1'>
                                                 <Text h='1' flex='1 1 40px' border='2px solid' borderColor='#33383E' borderRadius='2px'></Text>
                                                 <Text h='1' flex='1 1 40px' border='2px solid' borderColor='#33383E' borderRadius='2px'></Text>
@@ -262,8 +265,8 @@ class Tire extends Component {
                                                 <Text h='1' flex='1 1 40px' border='2px solid' borderColor='rgba(0, 0, 0, 0.1)' borderRadius='2px'></Text>
                                             </Flex>
                                         </Flex>
-                                        <Flex alignItems='center' flexDir='column' justifyContent='flex-start'>
-                                            <Text fontSize='1.25rem' lineHeight='1.875rem' fontWeight='600'>MILEAGE</Text>
+                                        <Flex alignItems='center'w={{md: '230px'}} flexDir='column' justifyContent='flex-start'>
+                                            <Text w='100%' textAlign='left' fontSize='1.25rem' lineHeight='1.875rem' fontWeight='600'>MILEAGE</Text>
                                             <Flex w='100%' gap='1'>
                                                 <Text h='1' flex='1 1 40px' border='2px solid' borderColor='#33383E' borderRadius='2px'></Text>
                                                 <Text h='1' flex='1 1 40px' border='2px solid' borderColor='#33383E' borderRadius='2px'></Text>
