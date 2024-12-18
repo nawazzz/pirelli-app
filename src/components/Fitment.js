@@ -7,11 +7,13 @@
     import NewHeader from './NewHeader';
     import FooterComponent from './FooterComponent';
 
-    class Fitment extends React.Component {
+    class Fitment extends React.Component { 
+
+        
     render() {
         return (
         <VStack>
-            {/* <NewHeader handleBookingPopup={this.handleBookingPopup}/> */}
+            <NewHeader />
             <VStack w='100%' maxW='1440px' mt='100px' >
                 <Flex flexDir='column' px={{base:'5', md:'140px'}} w='100%' py='12'>
                     <Flex as='nav' mb='2' cursor='pointer' alignItems='center'>
@@ -106,7 +108,7 @@
                                         consumptionValue={elm.consumptionValue}
                                         gripValue={elm.gripValue}
                                         soundValue={elm.soundValue}
-                                        handleClick={(event) => this.props.handleImageClick(event)}
+                                        // handleClick={(event) => this.props.handleImageClick(event)}
                             />
                                 )
                             })}

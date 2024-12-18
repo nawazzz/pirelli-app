@@ -10,6 +10,7 @@ import {
 import { CloseIcon } from '@chakra-ui/icons';
 import React from 'react';
 // import { useDispatch } from 'react-redux';
+import { Switch, Route, Routes, useParams, Link } from 'react-router-dom';
 
 class ContentBookAppointment extends React.Component {
     

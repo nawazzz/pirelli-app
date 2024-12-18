@@ -2,6 +2,7 @@ import { VStack, Select, Text, Box, Input, Flex, Button, Image } from '@chakra-u
 import { CloseIcon, ArrowBackIcon, InfoOutlineIcon } from '@chakra-ui/icons';
 import React from 'react';
 import yourTireImg from '../logos/your_tire_logo.jpg';
+import { Switch, Route, Routes, useParams, Link } from 'react-router-dom';
 
 class TireDetailsDrawer extends React.Component {
     render() {
@@ -84,8 +85,18 @@ class TireDetailsDrawer extends React.Component {
                             bottom='0' boxShadow={'rgba(31, 31, 31, 0.1) 0px -6px 10px 2px'}
                             padding='15px' borderRadius='lg'        
                     >
-                        <Button w='100%' bg='#F3F5F6' fontWeight='700' _hover={{bg: '#F3F5F6' }}>Book a tire change</Button>
-                        <Button w='100%' bg='#FFDD00' fontWeight='700' _hover={{bg: '#FFDD00' }}>Book new tires</Button>
+                        {/* <Button w='100%' bg='#F3F5F6' fontWeight='700' _hover={{bg: '#F3F5F6' }}>Book a tire change</Button>
+                        <Button w='100%' bg='#FFDD00' fontWeight='700' _hover={{bg: '#FFDD00' }}>Book new tires</Button> */}
+                        <Link to='/fitment' 
+                            style={{bg: '#F3F5F6', fontWeight: '700', borderRadius: '0.375rem', padding: '7px 16px',
+                                background: '#FFDD00', width: '100%', textAlign: 'center'
+                            }}
+                        >Book a tire change</Link>
+                        <Link to='/fitment' 
+                            style={{bg: '#F3F5F6', fontWeight: '700', borderRadius: '0.375rem', padding: '7px 16px',
+                                background: '#FFDD00', width: '100%', textAlign: 'center'
+                            }}
+                        >Book new tires</Link>
                     </Flex>
                 </Flex>
             </Flex>

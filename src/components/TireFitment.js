@@ -3,6 +3,7 @@ import { Flex, Image, Button, Text, Select, Box } from '@chakra-ui/react'
 import { Icon, ArrowUpIcon } from '@chakra-ui/icons'
 import fitmentLogo from '../logos/tire-fitment.png';    
 import logoPirelli from '../logos/pirelli.png';
+import { Switch, Route, Routes, useParams, Link } from 'react-router-dom';
 
 class TireFitment extends Component {
 
@@ -38,10 +39,12 @@ class TireFitment extends Component {
                                 <Flex  
                                 w='100%'                                    
                                 >
-                                    <Image src={fitmentLogo} alt={this.props.title}
-                                        width='100%'  objectFit='cover'
-                                        onClick={(event) => this.props.handleClick(event)}
-                                    />
+                                    <Link to='/pneumatici/auto/pirelli/cinturato/cinturato-p1'>
+                                        <Image src={fitmentLogo} alt={this.props.title}
+                                            width='100%'  objectFit='cover'
+                                            // onClick={(event) => this.props.handleClick(event)}
+                                        />
+                                    </Link>
                                 </Flex>
                             </Box>
 

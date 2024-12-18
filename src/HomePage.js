@@ -138,11 +138,11 @@ class HomePage extends React.Component {
     }
   }
 
-//   componentDidMount() {
-//     this.setState({
-//       isFitment: false
-//     })
-//   }
+  componentDidMount() {
+    this.setState({
+      isFitment: false
+    })
+  }
 
   handleBookingPopup = () => {
     console.log('lele')
@@ -204,12 +204,12 @@ class HomePage extends React.Component {
     this.handleButton()
   }
 
-  handleImageEvent = (event) => {
-    console.log(event, 'lelele')
-    this.setState({
-        showTirePage: !this.state.showTirePage
-    })
-  }
+//   handleImageEvent = (event) => {
+//     console.log(event, 'lelele')
+    // this.setState({
+    //     showTirePage: !this.state.showTirePage
+    // })
+//   }
 
   render() {
     return(
@@ -221,7 +221,8 @@ class HomePage extends React.Component {
               <VStack mt='100px'>
                 <Fitment voucherInput={this.state.voucherInput} handleVoucherInput={this.handleVoucherInput} 
                     handleButton={this.handleButton} handleKeyPress={this.props.handleKeyPress}
-                    fitmentList={this.state.fitmentList} handleImageClick={this.handleImageEvent}
+                    fitmentList={this.state.fitmentList} 
+                    // handleImageClick={this.handleImageEvent}
                 />
               </VStack>
             </div>
