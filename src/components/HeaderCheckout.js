@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import { VStack, Flex, Text, Image, Box } from '@chakra-ui/react'
+import { VStack, Flex, Text, Image, Box, Input } from '@chakra-ui/react'
 import driverLogo from '../logos/driver_logo.png';
 
 import { Switch, Route, Routes, useParams, Link } from 'react-router-dom';
 import FooterComponent from './FooterComponent';
-import { ArrowBackIcon } from '@chakra-ui/icons'
+import { ArrowBackIcon, Icon } from '@chakra-ui/icons'
 
 class HeaderCheckout extends Component {
   render() {
     return (
-        <Flex w='100%' position='relative' zIndex='1'>
+        <Flex w='100%' position='relative' zIndex='1' h='100%' >
             <Flex w='100%' bg='black' justifyContent='center' position='fixed'>
                 <Flex w='100%' py={{base: '6', md: '6'}} maxW='1440px' alignItems='center' px={{base: '25px', md:'120px'}}>
                     <Flex justifyContent='center' w='100%'>
@@ -66,41 +66,158 @@ class HeaderCheckout extends Component {
             {/* <VStack position='absolute' w='100%' top='565px' left='0'>
                 <FooterComponent/>
             </VStack> */}
-            <Flex mt='95px' w='100%' >
-                <Flex w='100%' justifyContent='center' maxW='1440px'>
-                    <Flex w='100%' justifyContent='space-around' pl='250px'>
-                        <Flex gap='2' alignItems='center'>
-                            <ArrowBackIcon/>
-                            <Text fontSize='16px' fontWeight='700'>Indietro</Text>
+            <Flex mt='95px' w='100%' h='100%' ml={{ md: '5dvw'}} >
+                <Flex w='100%' justifyContent='center' px={{base: '15px', md: '60px'}} minH='50vh' flexDir={{base: 'column', md: 'row'}}>
+                    <Flex flexDir='column' w={{base: '100%', md: '70%'}} pt='40px' px={{base: '0', md: '60px'}} gap='20' >
+                        <Flex w='100%' justifyContent='space-between' px={{base: '15px'}}>
+                            <Flex gap='2' alignItems='center' cursor='pointer' mr={{base: '5px'}}>
+                                <ArrowBackIcon/>
+                                <Text fontSize='16px' fontWeight='700' display={{base: 'none', md: 'block'}}>Indietro</Text>
+                            </Flex>
+                            <Flex gap='4' alignItems='center'>
+                                <Flex
+                                    bg='#F3F5F6' fontWeight='700' borderRadius='full' padding='4px 10px' 
+                                    gap='2'        background='#FFDD00' width='fit-content' textAlign='center' fontSize='0.75rem' lineHeight='1rem'
+                                >
+                                    <Text>1</Text>
+                                    <Text fontSize='14px' display={{base: 'none', md: 'block'}}>Trova il tuo rivenditore</Text>
+                                </Flex>
+                                <Text h='1px' bg='#DEE0E1' w='80px'></Text>
+                                <Flex
+                                bg='#DEE0E1' fontWeight='700' borderRadius='full' padding='4px 8px' 
+                                gap='2'        width='fit-content' justifyContent='center' fontSize='0.75rem' lineHeight='1rem'
+                                >
+                                    <Text textAlign='center'>2</Text>
+                                </Flex>
+                                <Text h='1px' bg='#DEE0E1' w='80px'></Text>
+                                <Flex
+                                bg='#DEE0E1' fontWeight='700' borderRadius='full' padding='4px 8px' 
+                                gap='2'        width='fit-content' justifyContent='center' fontSize='0.75rem' lineHeight='1rem'
+                                >
+                                    <Text textAlign='center'>3</Text>
+                                </Flex>
+                                <Text h='1px' bg='#DEE0E1' w='80px'></Text>
+                                <Flex
+                                bg='#DEE0E1' fontWeight='700' borderRadius='full' padding='4px 8px' 
+                                gap='2'        width='fit-content' justifyContent='center' fontSize='0.75rem' lineHeight='1rem'
+                                >
+                                    <Text textAlign='center'>4</Text>
+                                </Flex>
+                            </Flex>
                         </Flex>
-                        <Flex gap='4' alignItems='center'>
-                            <Flex
-                                bg='#F3F5F6' fontWeight='700' borderRadius='full' padding='4px 8px' 
-                                gap='2'        background='#FFDD00' width='fit-content' textAlign='center' fontSize='0.75rem' lineHeight='1rem'
-                            >
-                                <Text>1</Text>
-                                <Text>Trova il tuo rivenditore</Text>
+                        <Flex>
+                            <Flex flexDir='column'>
+                                {/* <Text fontSize='1rem' lineHeight='1.5rem' fontWeight='600' color='#5E6267'>Indirizzo</Text>
+                                <Text fontSize='2rem' lineHeight='2.5rem' fontWeight='600'>Trova un rivenditore</Text> */}
+                                <Flex flexDir='column' mt='8' gap='2' position='relative'>
+                                    <Flex position='absolute' zIndex='2' w='44px' h='44px' alignItems='center' justifyContent='center' top='15px' left='2px'>
+                                        {/* <Icon viewBox="0 0 24 24" w='6' h='6'>
+                                            <path
+                                                d="M8.23047 8.46769C8.6019 8.09626 9.04286 7.80162 9.52816 7.6006C10.0135 7.39958 10.5336 7.29611 11.0589 7.29611C11.5842 7.29611 12.1043 7.39958 12.5896 7.6006C13.0749 7.80162 13.5159 8.09626 13.8873 8.46769M20 20L16.05 16.05M18.118 11.059C18.118 14.9576 14.9576 18.118 11.059 18.118C7.16042 18.118 4 14.9576 4 11.059C4 7.16042 7.16042 4 11.059 4C14.9576 4 18.118 7.16042 18.118 11.059Z"
+                                                fill="none"
+                                                stroke='#B3B6B9'
+                                                // '#1E2329'
+                                                strokeWidth="1.5"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </Icon> */}
+                                    </Flex>
+                                    {/* <Input placeholder='Cerca' bg='white' h='70px' px='10' pt='2px' /> */}
+                                    <Flex w='fit-content' alignItems='center' color='white' gap='1' cursor='pointer'>
+                                        <Icon viewBox="0 0 24 24" color='white'>
+                                            <path
+                                                d="M12 22V17.5556M12 2V6.44444M6.44444 12H2M22 12H17.5556M17.4997 6.50028C20.5371 9.53769 20.5371 14.4623 17.4997 17.4997C14.4623 20.5371 9.53769 20.5371 6.50028 17.4997C3.46287 14.4623 3.46287 9.53769 6.50028 6.50028C9.53769 3.46287 14.4623 3.46287 17.4997 6.50028ZM13.5714 10.4287C14.4392 11.2965 14.4392 12.7035 13.5714 13.5714C12.7035 14.4392 11.2965 14.4392 10.4287 13.5714C9.56082 12.7035 9.56082 11.2965 10.4287 10.4287C11.2965 9.56084 12.7035 9.56084 13.5714 10.4287Z"
+                                                fill="none"
+                                                stroke="white"
+                                                strokeWidth="1.5"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </Icon>
+                                        <Text fontSize='12px' lineHeight='1rem' >Usa la tua posizione attuale</Text>
+                                    </Flex>
+                                </Flex>
                             </Flex>
-                            <Text h='2px' bg='#DEE0E1' w='80px'></Text>
-                            <Flex
-                            bg='#DEE0E1' fontWeight='700' borderRadius='full' padding='4px 8px' 
-                            gap='2'        width='fit-content' justifyContent='center' fontSize='0.75rem' lineHeight='1rem'
-                            >
-                                <Text textAlign='center'>2</Text>
+                        </Flex>
+                    </Flex>
+                    <Flex borderLeft='1px solid' borderColor='#DEE0E1' w={{base: '100%', md: '30%'}}>
+                        <Flex px='6' flexDir='column' justifyContent='space-between' w='100%'>
+                            <Flex>
+                                <Text fontSize='1.25rem' lineHeight='1.875rem' fontWeight='600'>La tua prenotazione</Text>
                             </Flex>
-                            <Text h='2px' bg='#DEE0E1' w='80px'></Text>
-                            <Flex
-                            bg='#DEE0E1' fontWeight='700' borderRadius='full' padding='4px 8px' 
-                            gap='2'        width='fit-content' justifyContent='center' fontSize='0.75rem' lineHeight='1rem'
-                            >
-                                <Text textAlign='center'>3</Text>
-                            </Flex>
-                            <Text h='2px' bg='#DEE0E1' w='80px'></Text>
-                            <Flex
-                            bg='#DEE0E1' fontWeight='700' borderRadius='full' padding='4px 8px' 
-                            gap='2'        width='fit-content' justifyContent='center' fontSize='0.75rem' lineHeight='1rem'
-                            >
-                                <Text textAlign='center'>4</Text>
+                            <Flex flexDir='column' alignItems='center'>
+                                <Icon viewBox="0 0 45 45" w='60px' h='60px' color='yellow'>
+                                    <g clipPath="url(#clip0_11536_252)">
+                                        <path
+                                        d="M12.932 20.0201C12.3696 19.3718 11.9987 19.2005 11.2941 18.7786C10.5833 18.3566 9.98992 18.2037 9.45836 18.2404C8.284 18.3321 7.4125 19.384 6.25049 20.7111C5.1503 21.9771 4.13663 23.1758 4.11809 24.295C4.11191 24.7353 4.27261 25.1512 4.61874 25.5732C4.97723 26.0074 5.94145 26.5701 6.14542 26.6863C7.23943 27.3345 8.46324 27.6526 9.62525 27.5608C10.7749 27.4752 11.8565 26.9859 12.6848 26.0319C14.2794 24.1971 14.2115 21.4817 12.932 20.0139V20.0201Z"
+                                        fill="none"
+                                        stroke="#1E2329"
+                                        strokeWidth="1.5"
+                                        strokeLinejoin="round"
+                                        />
+                                        <path
+                                        d="M15.3116 22.6132C17.4626 24.1299 20.3058 24.5641 23.2664 24.613L27.5374 29.0409L32.3461 25.4937C37.9089 26.4906 40.7398 29.2855 40.8819 35.5297V41.9574"
+                                        fill="none"
+                                        stroke="#1E2329"
+                                        strokeWidth="1.5"
+                                        strokeLinejoin="round"
+                                        />
+                                        <path
+                                        d="M10.2433 27.4752C12.8146 29.7136 16.4798 31.1753 19.4714 32.1416V41.9513"
+                                        fill="none"
+                                        stroke="#1E2329"
+                                        strokeWidth="1.5"
+                                        strokeLinejoin="round"
+                                        />
+                                        <path
+                                        d="M10.9232 18.5828L13.5563 16.3567C12.9506 15.1702 12.6044 13.8247 12.6044 12.4059C12.6044 7.57439 16.5602 3.66028 21.4431 3.66028C26.326 3.66028 30.2817 7.57439 30.2817 12.4059C30.2817 17.2373 26.3198 21.1514 21.4431 21.1514C19.9968 21.1514 18.637 20.809 17.4317 20.1974L13.5316 24.6497"
+                                        fill="none"
+                                        // color={props.color}
+                                        stroke="#1E2329"
+                                        strokeWidth="1.5"
+                                        strokeLinejoin="round"
+                                        />
+                                        <path
+                                        d="M21.4431 6.14331C17.9509 6.14331 15.12 8.94434 15.12 12.3998C15.12 15.8552 17.9509 18.6562 21.4431 18.6562C24.9353 18.6562 27.7661 15.8552 27.7661 12.3998C27.7661 8.94434 24.9353 6.14331 21.4431 6.14331Z"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="1.5"
+                                        strokeLinejoin="round"
+                                        />
+                                        <path
+                                        d="M21.4431 8.73645C19.3972 8.73645 17.7345 10.3816 17.7345 12.4059"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="1.5"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        />
+                                        <path
+                                        d="M25.1331 20.3564C26.499 21.4389 28.2297 22.0871 30.121 22.0871C34.5342 22.0871 38.1067 18.5461 38.1067 14.1855C38.1067 9.82498 34.528 6.28394 30.121 6.28394C29.3917 6.28394 28.6932 6.38179 28.0195 6.55915"
+                                        fill="none"
+                                        stroke="#1E2329"
+                                        strokeWidth="1.5"
+                                        strokeLinejoin="round"
+                                        />
+                                        <path
+                                        d="M33.4278 36.7162V41.9574"
+                                        fill="none"
+                                        stroke="#1E2329"
+                                        strokeWidth="1.5"
+                                        strokeLinejoin="round"
+                                        />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_11536_252">
+                                        <rect width="38" height="38.9148" fill="red" transform="translate(3.5 3.0426)" />
+                                        </clipPath>
+                                    </defs>
+                                </Icon>
+                                <Flex flexDir='column' alignItems='center'>
+                                    <Text fontSize='1.25rem' lineHeight='1.875rem' fontWeight='700'>Non hai ancora una prenotazione</Text>
+                                    <Text textAlign='center' fontSize='1rem' lineHeight='1.5rem'>Continua a esplorare i nostri prodotti e servizi e prenota quando sei pronto!</Text>
+                                </Flex>
                             </Flex>
                         </Flex>
                     </Flex>
